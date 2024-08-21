@@ -38,7 +38,7 @@ spec:
         - containerPort: 8080
         env:
         - name: MESSAGE
-          value: You've been hacked !
+          value: You've hacked the Kubernetes Cluster !
         - name: K8SURL
           value: CHANGE_K8SURL
         - name: K8STOKEN
