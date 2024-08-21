@@ -2,6 +2,10 @@
 
 A demo app that can be deployd to a Kubernetes cluster. It displays a message, the K8S Dashboard URL and the K8s Token and also namespace, pod, node and image details.
 
+
+
+![hacked](images/hacked.png)
+
 ## Paths
 
 | Method | Path | Description |
