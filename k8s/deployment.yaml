@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
       - name: hacked-app
-        image: chrisley75/kubernetes-hacked-app:1.0.2
+        image: chrisley75/kubernetes-hacked-app:1.0.4
         ports:
         - containerPort: 8080
         env:
