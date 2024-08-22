@@ -18,7 +18,7 @@ app.set('view engine', 'handlebars');
 var port = process.env.PORT || 8080;
 var message = process.env.MESSAGE || 'You have hacked the kubernetes cluster';
 var k8surl = process.env.K8SURL || 'k8s Dashboard URL';
-var k8stoken = process.env.K8STOKEN || 'k8s token to connect';
+var k8stoken = process.env.K8STOKEN || 'k8s token';
 var renderPathPrefix = (
   process.env.RENDER_PATH_PREFIX ? 
     '/' + process.env.RENDER_PATH_PREFIX.replace(/^[\\/]+/, '').replace(/[\\/]+$/, '') :

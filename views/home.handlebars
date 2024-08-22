@@ -5,11 +5,12 @@
   <table>
     <tr>
       <th>Kubernetes Dashboard URL:</th>
-      <td>{{ Kubernetes_Dashboard_URL }}</td>
+      <td><a href="{{ Kubernetes_Dashboard_URL }}" target="_blank">{{ Kubernetes_Dashboard_URL }}</a></td>
     </tr>
     <tr>
       <th>Kubernetes Token:</th>
       <td>{{ Kubernetes_Token }}</td>
+      <td><button onclick="copyKubernetesToken()">Copy</button></td>
     </tr>
     <tr>
       <th>namespace:</th>
@@ -28,3 +29,19 @@
 <div id="footer">
   {{ container }}
 </div>
+<script>
+function copyKubernetesToken() {
+  const tokenField = document.querySelector('#info table tr:nth-child(2) td:nth-child(2)');
+  const tokenValue = tokenField.textContent;
+
+  navigator.clipboard.writeText(tokenValue)
+    .then(() => {
+      console.log('Kubernetes token copied to clipboard');
+      alert('Kubernetes token copied to clipboard');
+    })
+    .catch(err => {
+      console.error('Failed to copy Kubernetes token:', err);
+      alert('Failed to copy Kubernetes token.');
+    });
+}
+</script>
